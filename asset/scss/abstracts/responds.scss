@@ -1,0 +1,28 @@
+@mixin respond-to($media) {
+	@if $media == xs {
+		@media (max-width: 768px) { @content; }
+	}
+	@else if $media == sm {
+		@media (min-width: 769px) and (max-width: 991px) { @content; }
+	}
+	@else if $media == md {
+		@media (min-width: 992px) and (max-width: 1200px){ @content; }
+	}
+
+	@else if $media == mdt {
+		@media (min-width: 1200px) and (max-width: 1300px) { @content; }
+	}
+}
+
+@function exch($dem) {
+	@return $dem * (12/16) + px;
+}
+
+@function  prop($num){
+	@return ($num / 1920)*100 + vw;
+}
+
+@function get-vw($target) {
+	$vw-context: (1000*.01) * 1px;
+	@return ($target/$vw-context) * 1vw;
+}
