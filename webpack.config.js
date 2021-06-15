@@ -1,5 +1,7 @@
 const path = require('path');
+const cleanWebpackPlugin = require('clean-webpack-plugin').cleanWebpackPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 let mode = "development";
 if(process.env === "production") {
     mode = "production";
@@ -26,7 +28,7 @@ module.exports = {
             },
             {
                 test: /\.(scss|css)$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader',  'sass-loader'],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
 				test: /\.(png|jpg)$/i,
@@ -49,6 +51,8 @@ module.exports = {
         hot: true,
     },
     plugins: [
+        
         new MiniCssExtractPlugin({filename:'css/style.bundle.css'}),
+        
     ]
 }

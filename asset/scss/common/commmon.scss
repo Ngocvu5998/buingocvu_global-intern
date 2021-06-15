@@ -1,13 +1,33 @@
-p {
-    color: red;
+
+* {
+    margin: 0;
+    padding: 0;
 }
-h3 {
-    padding: 20px;
+body {
+    font-family: roboto, sans-serif;
+}
+p {
+    margin-bottom: 0;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+li {
+    float: left;
+    list-style-type: none;
 }
 .container {
     width: 960px;
 }
-
+.box {
+    padding: 57px 0;
+}
+.flex-box {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
 .call-button {
     width: 75px;
     height: 75px;
@@ -19,3 +39,65 @@ h3 {
     bottom: 200px;
     left: 50px;
 }
+.old-price {
+    color: rgb(111,111,111);
+    text-decoration: line-through;
+   
+}
+.new-price {
+    color: $color3;
+    
+}
+.clear-fix {
+    clear: both;
+}
+
+
+
+
+    
+    .combo__discount {
+        float: right;
+        width: 205px;
+        height: 78px;
+        border-radius: 10px;
+        background: linear-gradient($color4,$color3); 
+        animation: zoom 1.2s linear  infinite;
+        
+        .text {
+            font-size: 18px;
+            font-family:"roboto", sans-serif;
+            color: $color2;
+            text-align: center;
+            margin: 20px 0;
+            line-height: 1.2;
+            
+        }
+    }
+    
+    .hand { 
+        position: relative;
+        width: 335px;
+        height: 29px;
+        float: right;
+        background-color: rgb(138, 135, 135);
+        border-radius: 100px;
+        .hand-color {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 29px;
+            font-size: 14px;
+            color: $color2;
+            background-color: $color3;
+            border-radius: 100px;
+            animation: flash 1.5s linear infinite;
+            text-align: center;
+            line-height: 29px;
+        }
+    }
+    .hightlight {
+        color: $color3;
+    }
+

@@ -15,4 +15,221 @@
             height: 100%;
         }
     }
+    .brand__title  {
+        float: left;
+        font-size: 23px;
+        font-family: $Anton;
+        line-height: 84px;
+        color: $color2;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .slogan__title {
+        float: right;
+        font-size:22px;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        line-height: 84px;
+        color: $color2;
+        text-transform: uppercase;
+    }
+}
+.header-main    {
+    width: 100%;
+    height: 643px;
+    background-image: url("/dist/imgs/asset-1-20200903092943-20201007025123.png");
+    .product__title {
+        position: relative;
+        width: 340px;
+        height: 52px;
+        margin-bottom: 35px;
+        background: linear-gradient(148deg, $color4, $color3 );
+        border: 3px solid $color2;
+        border-radius: 99px;
+        
+        .title {
+            color: $color2;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: inherit;
+            line-height: 52px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 2px 1px red;
+        }
+    }
+    .product__desc {
+        h3 {
+            font-size: 53px;
+            font-family: "Baloo Bhaina", cursive;
+            font-weight: bold;
+            line-height: 1;
+            color:$color2;
+            text-shadow: -2px 2px 3px rgba(114,184,88,1);
+            
+        }
+        img {
+            width: 286px;
+            height: 114px;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+    .product__info {
+        width: 415px;
+        height: 100%;
+        margin-top: 25px;
+        background: $color2;
+        border-radius: 10px;
+        .price {
+            width: 210px;
+            height: 78px;
+            background-color: rgb(238,238,238);
+            float: left;
+            text-align: center;
+            .old-price {
+                margin-top: 15px;
+                margin-bottom: 0px;
+                font-size: 16px;
+                font-family: inherit;
+                font-weight: 400;
+                line-height: 22px;
+            }
+            .new-price {
+                margin-bottom: 15px;
+                font-size: 28px;
+                font-weight:bold;
+                font-family: $roboto;
+                line-height: 34px;
+                animation: flash 1.2s linear  infinite;
+            }
+        }
+        .combo__discount {
+            float: right;
+            width: 205px;
+            height: 78px;
+            border-radius: 10px;
+            background: linear-gradient($color4,$color3);
+            animation: zoom 1.2s linear 0s  infinite;
+            .text {
+                font-size: 18px;
+                font-family:"roboto", sans-serif;
+                color: $color2;
+                text-align: center;
+                margin: 20px 0;
+                line-height: 1.2;
+            }
+        }
+        
+    }
+    
+}
+.info {
+    width: 100%;
+    height: 100%;
+    margin-top: 4px;
+    .live {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 8px ;
+    
+        p {
+            font-size: 14px;
+            color: $color7;
+            text-align: center;
+            i {
+                position: relative;
+                top: 5px;
+                right: 5px;
+                font-size: 28px;
+                line-height: 34px;
+                color: $color4;
+            }
+            span {
+                font-size: 18px;
+                line-height: 24px;
+                color: $color3;
+            }
+        }
+        
+    }
+    .combo__effect {
+        margin: 8px 20px;
+        .energy {
+            display: block;
+            width: 18px;
+            height: 30px;
+            font-size: 30px;
+            float: left;
+            font-weight: bold;
+            color: $color3;
+            animation: flash 1.5s linear infinite;
+        }
+        
+        
+    }
+    .inventory_quantity {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $roboto;
+        color: $color8;
+        text-align: center;
+        padding-bottom: 30px;
+        .quantity {
+            font-size: 18px;
+            color: $color3; 
+        }
+    }
+}
+
+
+.abc {
+    
+    p{
+        color: red;
+        animation: zoom 1.2s linear 0s infinite;
+    }
+    
+}
+.animation {
+    border: 1px solid red;
+    text-align: center;
+    width: 100px;
+    position: relative;
+    animation: myAnimation 5s ease-out infinite;
+    -moz-animation: myAnimation 5s ease-out infinite;
+    -webkit-animation: myAnimation 5s ease-out infinite;
+    -o-animation: myAnimation 5s ease-out infinite;
+}
+@keyframes myAnimation {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
